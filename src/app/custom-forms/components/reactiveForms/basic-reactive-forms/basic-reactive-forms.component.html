@@ -1,0 +1,62 @@
+<h1>Basic Reactive Form</h1>
+<style>
+    label {
+        display: inherit;
+    }
+
+    input {
+        border: 1px solid black;
+    }
+
+    input.ng-touched.ng-invalid {
+        border: 1px solid red;
+    }
+</style>
+<button type="button" class="btn btn-success">
+    Show
+</button>
+<button (click)="emit()">Emit Replay Subject</button>
+<form [formGroup]="basicForm" (submit)="onBasicFormSubmittion()">
+    <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback" style="display: block;">
+        <div *ngIf="f['firstName']['errors']['required']">First Name is required</div>
+    </div>
+    <label>
+        First Name
+        <input tooltip="sdfsdf sdff" type="text" formControlName="firstName" />
+    </label>
+    <label>
+        Last Name
+        <input type="text" formControlName="lastName" />
+    </label>
+    <div formGroupName="address">
+        <h2>Address</h2>
+        <label>
+            Street
+            <input type="text" formControlName="street" />
+        </label>
+        <label>
+            State
+            <input type="text" formControlName="state" />
+        </label>
+        <label>
+            City
+            <input type="text" formControlName="city" />
+        </label>
+        <label>
+            Zip
+            <input type="text" formControlName="zip" />
+        </label>
+    </div>
+    <div formArrayName="aliases">
+        <h2>Aliases</h2>
+        <button type="button" (click)="addAliases()">Add</button>
+        <div *ngFor="let alias of aliases.controls;let i=index">
+            <label>
+                <input [formControlName]="i" />
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn-success">Submit</button>
+</form>
+
+<p>{{basicForm.value }}</p>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbDropdownModule, NgbModalModule, NgbPaginationModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,9 +18,11 @@ import { HeaderComponent } from './components/header/header.component';
     NgbTooltipModule,
     NgbModalModule,
     NgbDropdownModule,
-    NgbPaginationModule
+    NgbPaginationModule,
+    RouterModule
   ],
   exports: [
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     NgbTooltipModule,
