@@ -12,4 +12,20 @@ export class FlexComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  fnd() {
+    const pro = new Promise((resolve, reject) => {
+      if (true) {
+        resolve("success....");
+      } else {
+        reject("failure....");
+      }
+    });
+    pro
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }

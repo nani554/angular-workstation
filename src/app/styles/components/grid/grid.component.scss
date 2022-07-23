@@ -1,0 +1,73 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: .5fr 1fr; // fr: fraction, its like flex-grow and grow to entire display
+    // grid-template-columns: 100px 100px;
+    // grid-template-columns: 200px;
+    // grid-template-rows: 100px 100px;
+    grid-auto-rows: minmax(100px, auto);
+    // grid-auto-columns: 300px; 
+    // grid-row-gap: 10px;
+    // grid-column-gap: 10px;
+    // grid-template-areas: 
+    // "header header"
+    // "sidebar content"
+    // "sidebar2 content2"
+    // "content3 content3"; // usefull if you want to have different view on different devices
+    grid-gap: 10px;
+
+    // justify-content: 
+    // center;
+    // grid-template-columns: 100px 100px;
+    // align-content: end;
+    // height: 50vh;
+    // justify-items: center;
+    // align-items: start;
+    article.grid-item {
+        background-color: #eee;
+        border: 1px solid hsl(0, 1%, 65%);
+
+        &::before {
+            content: attr(data-value);
+        }
+
+        &.grid-item-1 {
+            // grid-area: header;
+            // grid-column-start: 1;
+            // grid-column-end: span 2; //spans to 2 columns
+            // grid-column-end: 2; // spans to 2 columns, here line between two columns is considered a column
+            // grid-column-end: 3; // spans to 3 columns
+            // grid-column-end: -1; // spans to end of the columns available
+            // align-self: 
+            // end;
+            // justify-self: 
+            // center;
+        }
+
+        &.grid-item-2 {
+            // grid-area: sidebar;
+            // grid-row-start: 2;
+            // grid-row-end: 3;
+            // grid-row: span 2;
+        }
+
+        &.grid-item-3 {
+            // grid-area: content;
+            // grid-row-start: 2;
+            // grid-row-end: 4;
+            // grid-row: span 2;
+        }
+
+        &.grid-item-4 {
+            // grid-area: sidebar2;
+            // grid-row: span 2;
+        }
+
+        &.grid-item-5 {
+            // grid-area: content2;
+        }
+
+        &.grid-item-6 {
+            // grid-area: content3;
+        }
+    }
+}

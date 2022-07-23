@@ -4,13 +4,19 @@ import { MaterializeComponent } from './components/materialize/materialize.compo
 import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
 import { SharedModule } from '../shared/shared.module';
 import { RxjsOperatorsRoutingModule } from './rxjs-operators-routing.module';
+import { BasicOperatorsComponent } from './components/basic-operators/basic-operators.component';
+import { BasicForkJoinComponent } from './components/fork-join/basic-fork-join/basic-fork-join.component';
+import { CustomReplaySubjectComponent } from './components/subject/replay-subject/custom-replay-subject/custom-replay-subject.component';
 
 
 
 @NgModule({
   declarations: [
     MaterializeComponent,
-    RxjsOperatorsComponent
+    RxjsOperatorsComponent,
+    BasicOperatorsComponent,
+    BasicForkJoinComponent,
+    CustomReplaySubjectComponent
   ],
   imports: [
     SharedModule,

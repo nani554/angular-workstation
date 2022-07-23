@@ -11,5 +11,13 @@ export class BasicCountComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  count: number = 0;
+  increaseCount() {
+    this.count++;
+  }
+  decreaseCount() {
+    if (this.count === 0) return;
+    this.count--;
+  }
 }
