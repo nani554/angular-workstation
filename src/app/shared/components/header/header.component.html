@@ -13,13 +13,21 @@
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/rxjs-operators/materialize" routerLinkActive="active"
-            ariaCurrentWhenActive="page">Features</a>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">RXJS-Operators</a>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" ngbDropdownItem routerLink="/rxjs-operators/materialize" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Materialize</a>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/custom-forms" routerLinkActive="active"
-            ariaCurrentWhenActive="page">Forms Module</a>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">Forms Module</a>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" ngbDropdownItem routerLink="/custom-forms/basic-reactive-form"
+              routerLinkActive="active" ariaCurrentWhenActive="page">Basic Reactive Form</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">...</a>

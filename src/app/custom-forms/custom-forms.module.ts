@@ -4,12 +4,14 @@ import { BasicReactiveFormsComponent } from './components/reactiveForms/basic-re
 import { CustomFormsRoutingModule } from './custom-forms-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomFormsComponent } from './components/custom-forms/custom-forms.component';
 
 
 
 @NgModule({
   declarations: [
-    BasicReactiveFormsComponent
+    BasicReactiveFormsComponent,
+    CustomFormsComponent
   ],
   imports: [
     SharedModule,
