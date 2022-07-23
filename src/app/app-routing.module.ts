@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import("./styles/styles.module").then(data => data.StylesModule)
   },
   {
+    path: "js-code-snippets",
+    loadChildren: () => import("./js-code-snippets/js-code-snippets.module").then(data => data.JsCodeSnippetsModule)
+  },
+  {
     path: "**",
     component: NotFoundComponent
   }
