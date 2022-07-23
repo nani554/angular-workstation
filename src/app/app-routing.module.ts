@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import("./js-code-snippets/js-code-snippets.module").then(data => data.JsCodeSnippetsModule)
   },
   {
+    path: "dependencies",
+    loadChildren: () => import("./all-dependencies/all-dependencies.module").then(data => data.AllDependenciesModule)
+  },
+  {
     path: "**",
     component: NotFoundComponent
   }

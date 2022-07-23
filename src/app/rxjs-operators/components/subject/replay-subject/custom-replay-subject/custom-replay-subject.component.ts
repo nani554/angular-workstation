@@ -24,7 +24,7 @@ export class CustomReplaySubjectComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscriptionList.map(sub => sub.unsubscribe());
+    this.subscriptionList.forEach(sub => sub.unsubscribe());
   }
 
 }

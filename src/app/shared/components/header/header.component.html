@@ -37,6 +37,14 @@
         </li>
         <li class="nav-item dropdown" ngbDropdown>
           <a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">Dependencies</a>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" ngbDropdownItem routerLink="/dependencies/lodash" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Lodash</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
             aria-haspopup="true" aria-expanded="false">Forms Module</a>
           <div class="dropdown-menu" ngbDropdownMenu>
             <a class="dropdown-item" ngbDropdownItem routerLink="/custom-forms/basic-reactive-form"
