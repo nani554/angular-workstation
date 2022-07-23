@@ -1,0 +1,43 @@
+<section>
+    <input type="text" [(ngModel)]="searchText">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" sortable="employeeName" (sort)="onSort($event)">Employee Name</th>
+                <th scope="col" sortable="city" (sort)="onSort($event)">City</th>
+                <th scope="col">DOB</th>
+                <th scope="col" sortable="country" (sort)="onSort($event)">Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees | employeeFilter: searchText; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                    {{ employee.employeeName }}
+                </td>
+                <td>{{ employee.city }}</td>
+                <td>{{ employee.country }}</td>
+                <td>
+                    {{employee.dob | dateLocale: "te-IN"}}
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="showEmployeeDetails(employee)">
+                        Details
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="employeeSize" [(page)]="page" [pageSize]="pageSize"
+            (pageChange)="refreshEmployees()">
+        </ngb-pagination>
+
+        <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshEmployees()">
+            <option [ngValue]="2">2 items per page</option>
+            <option [ngValue]="4">4 items per page</option>
+            <option [ngValue]="6">6 items per page</option>
+        </select>
+    </div>
+</section>

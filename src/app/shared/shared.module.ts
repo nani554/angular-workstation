@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbDropdownModule, NgbModalModule, NgbPaginationModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { DateLocalePipe } from './pipes/date-locale.pipe';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    DateLocalePipe
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { RouterModule } from '@angular/router';
     NgbModalModule,
     NgbDropdownModule,
     NgbPaginationModule,
-    HeaderComponent
+    HeaderComponent,
+    DateLocalePipe
   ]
 })
 export class SharedModule { }

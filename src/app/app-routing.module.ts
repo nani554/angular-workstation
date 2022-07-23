@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: () => import("./all-dependencies/all-dependencies.module").then(data => data.AllDependenciesModule)
   },
   {
+    path: "employee",
+    loadChildren: () => import("./employee/employee.module").then(data => data.EmployeeModule)
+  },
+  {
     path: "**",
     component: NotFoundComponent
   }
